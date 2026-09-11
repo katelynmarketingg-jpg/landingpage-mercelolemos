@@ -1,0 +1,248 @@
+/* ============================================================
+   Marcelo A. R. de Lemos — Advocacia Criminal
+   Landing page styles
+   ============================================================ */
+
+:root {
+  --navy: #131a2b;
+  --navy-800: #1c2740;
+  --navy-700: #263352;
+  --ink: #1a1f2b;
+  --paper: #fbfaf7;
+  --paper-2: #f3f0e9;
+  --muted: #5c6373;
+  --line: #e4e0d6;
+  --gold: #b08a48;
+  --gold-soft: #c9a463;
+  --white: #ffffff;
+
+  --serif-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --serif-text: "Source Serif 4", Georgia, serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  --wrap: 1120px;
+  --wrap-narrow: 720px;
+  --radius: 10px;
+  --shadow: 0 18px 48px rgba(19, 26, 43, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; }
+
+h1, h2, h3 { font-family: var(--serif-display); font-weight: 600; line-height: 1.12; margin: 0; letter-spacing: 0.2px; }
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding-inline: 24px; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--navy); color: #fff; padding: 10px 16px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(251, 250, 247, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; }
+
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+.brand:hover { text-decoration: none; }
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 8px;
+  background: var(--navy); color: var(--gold-soft);
+  font-family: var(--serif-display); font-weight: 700; font-size: 18px; letter-spacing: 1px;
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-name { font-family: var(--serif-display); font-size: 19px; font-weight: 600; }
+.brand-role { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+
+.site-nav { display: flex; gap: 28px; }
+.site-nav a {
+  color: var(--ink); font-size: 15px; font-weight: 500; letter-spacing: 0.3px;
+  padding: 4px 0; border-bottom: 2px solid transparent;
+}
+.site-nav a:hover { color: var(--gold); border-bottom-color: var(--gold); text-decoration: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    radial-gradient(1200px 400px at 80% -10%, rgba(176, 138, 72, 0.16), transparent 60%),
+    linear-gradient(180deg, var(--navy) 0%, var(--navy-800) 100%);
+  color: #f4f1ea;
+  padding-block: 92px 96px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 44px 44px; opacity: 0.35; pointer-events: none;
+}
+.hero-inner { max-width: var(--wrap-narrow); position: relative; }
+.eyebrow {
+  margin: 0 0 20px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-soft); font-weight: 600;
+}
+.hero-title { font-size: clamp(2.3rem, 6vw, 3.9rem); font-weight: 600; color: #fff; }
+.hero-lede { margin: 26px 0 0; font-family: var(--serif-text); font-size: clamp(1.05rem, 2.4vw, 1.28rem); color: #d9d5ca; max-width: 60ch; }
+.hero-meta { margin-top: 30px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #c3bfb3; }
+.byline { font-weight: 600; color: #ece8de; }
+.dot { color: var(--gold); }
+.hero-actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 13px 26px; border-radius: 8px; font-weight: 600; font-size: 15px;
+  letter-spacing: 0.3px; cursor: pointer; border: 1px solid transparent; transition: all 0.18s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn-primary { background: var(--gold); color: #1a1200; }
+.btn-primary:hover { background: var(--gold-soft); }
+.btn-ghost { background: transparent; color: #f4f1ea; border-color: rgba(244, 241, 234, 0.35); }
+.btn-ghost:hover { border-color: var(--gold-soft); color: #fff; }
+
+/* ---------- Sections ---------- */
+.section { padding-block: 80px; }
+.section-kicker {
+  margin: 0 0 12px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); font-weight: 700;
+}
+.section-kicker-light { color: var(--gold-soft); }
+.section h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+.section > .wrap > h2 { margin-bottom: 8px; }
+
+/* About */
+.section-about { border-bottom: 1px solid var(--line); }
+.grid-about { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
+.about-copy p { font-family: var(--serif-text); font-size: 1.08rem; color: #333a49; margin: 16px 0 0; }
+.about-copy h2 { margin-bottom: 6px; }
+.about-facts { list-style: none; margin: 6px 0 0; padding: 24px; background: var(--paper-2); border-radius: var(--radius); border: 1px solid var(--line); }
+.about-facts li { padding: 14px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+.about-facts li:last-child { border-bottom: 0; padding-bottom: 0; }
+.about-facts li:first-child { padding-top: 0; }
+.fact-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.fact-value { font-family: var(--serif-text); color: var(--ink); font-size: 1.02rem; }
+
+/* Article */
+.section-article { background: var(--white); border-bottom: 1px solid var(--line); }
+.article-wrap { max-width: var(--wrap-narrow); }
+.article-header { margin-bottom: 40px; padding-bottom: 28px; border-bottom: 3px double var(--line); }
+.article-title { font-size: clamp(1.9rem, 4.5vw, 2.8rem); margin-top: 6px; }
+.article-sub { margin: 18px 0 0; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.article-body p {
+  font-family: var(--serif-text);
+  font-size: 1.16rem; line-height: 1.85; color: #262b36;
+  margin: 0 0 1.5em; text-align: justify; hyphens: auto;
+}
+.article-body p:first-of-type::first-letter {
+  font-family: var(--serif-display); font-weight: 700;
+  font-size: 3.6em; line-height: 0.82; float: left;
+  padding: 6px 12px 0 0; color: var(--navy);
+}
+.article-body em { font-style: italic; }
+
+.pullquote {
+  margin: 40px 0; padding: 4px 0 4px 28px;
+  border-left: 4px solid var(--gold);
+  font-family: var(--serif-display); font-weight: 600;
+  font-size: clamp(1.4rem, 3.2vw, 1.9rem); line-height: 1.3; color: var(--navy);
+}
+
+.fn-ref { color: var(--gold); font-weight: 600; text-decoration: none; padding: 0 1px; }
+.fn-ref sup { font-size: 0.72em; }
+.fn-ref:hover { text-decoration: underline; }
+:target { scroll-margin-top: 90px; }
+
+/* Notes */
+.notes { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.notes h3 { font-family: var(--serif-display); font-size: 1.5rem; margin-bottom: 18px; color: var(--navy); }
+.notes-list { padding-left: 22px; margin: 0; }
+.notes-list li { font-size: 0.95rem; line-height: 1.6; color: #444b58; margin-bottom: 14px; }
+.notes-list li:target { background: #fbf3e2; border-radius: 6px; padding: 8px 10px; margin-left: -10px; }
+.fn-back { margin-left: 6px; font-size: 0.9rem; }
+.notes-source { margin-top: 22px; font-size: 0.9rem; color: var(--muted); font-style: italic; }
+
+/* Practice */
+.section-practice { background: var(--paper); }
+.practice-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.practice-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px; transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-top: 3px solid var(--gold);
+}
+.practice-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.practice-card h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 10px; }
+.practice-card p { margin: 0; color: #454b58; font-size: 1rem; }
+
+/* Contact */
+.section-contact {
+  background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy) 100%);
+  color: #f4f1ea;
+}
+.contact-inner { max-width: var(--wrap-narrow); }
+.section-contact h2 { color: #fff; }
+.contact-lede { font-family: var(--serif-text); color: #d3cfc4; margin: 14px 0 32px; font-size: 1.1rem; }
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.contact-form label { display: flex; flex-direction: column; gap: 7px; font-size: 13px; letter-spacing: 0.5px; color: #cfcabd; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+  font-family: var(--sans); font-size: 16px; color: #fff;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px; padding: 12px 14px; resize: vertical;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; border-color: var(--gold-soft); background: rgba(255, 255, 255, 0.1);
+}
+.contact-form .btn { align-self: flex-start; }
+.form-note { margin: 2px 0 0; font-size: 14px; color: var(--gold-soft); }
+
+/* Footer */
+.site-footer { background: #0e1420; color: #b9b6ac; padding-block: 40px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand .brand-mark { background: var(--navy-700); }
+.footer-name { margin: 0; font-family: var(--serif-display); font-size: 18px; color: #eee9dd; font-weight: 600; }
+.footer-role { margin: 2px 0 0; font-size: 12.5px; color: #8f8c82; }
+.footer-legal { margin: 0; font-size: 13px; color: #8f8c82; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px) {
+  .site-nav { gap: 18px; }
+  .grid-about { grid-template-columns: 1fr; gap: 32px; }
+  .practice-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .site-nav { display: none; }
+  .section { padding-block: 60px; }
+  .hero { padding-block: 66px 70px; }
+  .article-body p { text-align: left; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn:hover, .practice-card:hover { transform: none; }
+}
