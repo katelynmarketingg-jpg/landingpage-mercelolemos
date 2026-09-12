@@ -490,6 +490,7 @@ a { color: inherit; text-decoration: none; }
 
 /* 07 — Obras (fundo off-white) */
 .section-obras { background: #e9e8e3; color: var(--ink); }
+#obras .section-head { max-width: 1060px; }
 .obras-feature { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
 .obras-photo { border-radius: 5px; overflow: hidden; box-shadow: 0 44px 84px rgba(0, 0, 0, 0.2); }
 .obras-photo img { width: 100%; display: block; }
