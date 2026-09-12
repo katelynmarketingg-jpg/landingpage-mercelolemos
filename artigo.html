@@ -17,7 +17,7 @@
     .article-topbar .header-inner { padding-block: 18px; }
     .article-back { font-family: var(--ui); font-size: 13px; letter-spacing: 1px; color: var(--on-dark); display: inline-flex; align-items: center; gap: 8px; }
     .article-back:hover { color: var(--gold); }
-    .article-hero { background: linear-gradient(180deg, #0b0b0d, #131317); color: var(--on-dark); padding: 120px 0 70px; }
+    .article-hero { background: linear-gradient(180deg, #000000, #232321); color: var(--on-dark); padding: 120px 0 70px; }
     .article-hero .wrap { max-width: 780px; }
     .article-hero .kicker { color: var(--gold-soft); }
     .article-hero h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); font-weight: 600; }
@@ -34,7 +34,7 @@
     .notes-block h2 { font-size: 1.6rem; margin-bottom: 20px; }
     .notes-block ol { padding-left: 22px; margin: 0; }
     .notes-block li { font-size: 0.98rem; line-height: 1.6; color: #4a4740; margin-bottom: 15px; }
-    .notes-block li:target { background: #f0e6cf; border-radius: 4px; padding: 8px 12px; margin-left: -12px; }
+    .notes-block li:target { background: rgba(155,123,64,0.15); border-radius: 4px; padding: 8px 12px; margin-left: -12px; }
     .fn-back { margin-left: 6px; color: var(--gold); }
     .notes-source { margin-top: 24px; font-style: italic; color: var(--ink-soft); font-size: 0.95rem; }
     .article-foot { text-align: center; padding: 0 28px 90px; }
@@ -44,11 +44,7 @@
   <header class="site-header article-topbar" data-scrolled>
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark">ML</span>
-        <span class="brand-text">
-          <span class="brand-name">Marcelo A. R. de Lemos</span>
-          <span class="brand-role">Advocacia Criminal</span>
-        </span>
+        <img class="brand-logo" src="images/logo.png" alt="Marcelo A. R. de Lemos — Advocacia Criminal" />
       </a>
       <a class="article-back" href="index.html">← Voltar ao início</a>
     </div>
@@ -253,11 +249,8 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark">ML</span>
-        <div>
-          <p class="footer-name">Marcelo Augusto Rodrigues de Lemos</p>
-          <p class="footer-role">Advogado criminalista · Doutorando (Unisinos) · Mestre em Ciências Criminais (PUCRS)</p>
-        </div>
+        <img class="footer-logo" src="images/logo.png" alt="Marcelo A. R. de Lemos — Advocacia Criminal" />
+        <p class="footer-role">Advogado criminalista · Doutorando (Unisinos) · Mestre em Ciências Criminais (PUCRS)</p>
       </div>
       <p class="footer-legal">© <span id="ano"></span> Marcelo A. R. de Lemos. Todos os direitos reservados.</p>
     </div>
