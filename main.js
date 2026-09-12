@@ -85,8 +85,7 @@
   var apply = function () {
     var y = window.scrollY || 0;
     if (y < 900) {
-      if (photo) photo.style.transform = "translateY(" + (y * 0.18) + "px) scale(1.05)";
-      if (art) art.style.transform = "translateY(" + (y * 0.08) + "px)";
+      if (photo) photo.style.transform = "translateY(" + (y * 0.16) + "px) scale(1.1)";
     }
     ticking = false;
   };
