@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicação — Marcelo A. R. de Lemos</title>
+  <meta name="description" content="Publicações de Marcelo Augusto Rodrigues de Lemos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { background: var(--cream); }
+    .article-topbar { background: var(--black); }
+    .article-topbar .header-inner { padding-block: 18px; }
+    .article-back { font-family: var(--ui); font-size: 13px; letter-spacing: 1px; color: var(--on-dark); }
+    .article-back:hover { color: var(--gold); }
+    .article-hero { background: linear-gradient(180deg, #000000, #232321); color: var(--on-dark); padding: 128px 0 72px; }
+    .article-hero .wrap { max-width: 800px; }
+    .article-hero .kicker { color: var(--gold-soft); }
+    .article-hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -0.8px; line-height: 1.08; }
+    .article-hero .meta { margin-top: 22px; font-family: var(--ui); font-size: 12.5px; letter-spacing: 1.5px; color: var(--gold-soft); text-transform: uppercase; }
+    .reading { max-width: 720px; margin: 0 auto; padding: 72px 28px 96px; }
+    .reading-lead { font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.5; color: var(--ink); margin: 0 0 40px; font-weight: 500; }
+    .reading-note {
+      border-left: 3px solid var(--gold); background: rgba(155, 123, 64, 0.08);
+      padding: 22px 26px; border-radius: 0 4px 4px 0; color: var(--ink-soft);
+      font-size: 1.02rem; line-height: 1.6;
+    }
+    .reading-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
+    .reading-back { margin-top: 56px; }
+  </style>
+</head>
+<body>
+  <header class="site-header article-topbar" data-scrolled>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/logo.png" alt="Marcelo A. R. de Lemos — Advocacia Criminal e Penal Empresarial" />
+      </a>
+      <a class="article-back" href="index.html#publicacoes">← Publicações</a>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <div class="wrap">
+      <p class="kicker">Publicações · ConJur</p>
+      <h1 id="art-title">Publicação</h1>
+      <p class="meta" id="art-authors">Marcelo Augusto Rodrigues de Lemos</p>
+    </div>
+  </section>
+
+  <article class="reading">
+    <p class="reading-lead" id="art-lead" hidden></p>
+    <div class="reading-note">
+      Leitura integral em preparação nesta página. Publicação original no
+      <strong>Consultor Jurídico (ConJur)</strong>.
+    </div>
+    <div class="reading-actions">
+      <a class="btn btn-outline-dark" id="art-source" href="#" target="_blank" rel="noopener" hidden>Ler no ConJur →</a>
+    </div>
+    <p class="reading-back"><a class="link-cta" href="index.html#publicacoes">← Todas as publicações</a></p>
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="images/logo.png" alt="Marcelo A. R. de Lemos — Advocacia Criminal e Penal Empresarial" />
+        <p class="footer-role">OAB/RS 94.933 · OAB/RO 13.901 · Advocacia Criminal e Penal Empresarial</p>
+      </div>
+      <p class="footer-legal">© <span id="ano"></span> Marcelo A. R. de Lemos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var ARTIGOS = {
+        "fundo-do-mar": {
+          titulo: "1.000 advogados no fundo do mar? Um bom começo!",
+          autores: "Marcelo Augusto Rodrigues de Lemos · Lenio Luiz Streck",
+          lead: "Uma reflexão sobre advocacia, direito de defesa e os limites da eficiência na prestação jurisdicional."
+        },
+        "funcionalismo": {
+          titulo: "Funcionalismo penal e positivismo jurídico",
+          autores: "Marcelo Augusto Rodrigues de Lemos"
+        },
+        "verdade-caso-concreto": {
+          titulo: "Nem sempre algo correto (lei ou tese) é verdadeiro (no caso concreto)!",
+          autores: "Marcelo Augusto Rodrigues de Lemos"
+        },
+        "penas-8-1": {
+          titulo: "Desmistificando as penas do 8/1: o caso Débora",
+          autores: "Marcelo Augusto Rodrigues de Lemos"
+        }
+      };
+
+      function getParam(name) {
+        var m = new RegExp("[?&]" + name + "=([^&]*)").exec(window.location.search);
+        return m ? decodeURIComponent(m[1]) : null;
+      }
+
+      var slug = getParam("a");
+      var art = slug && ARTIGOS[slug];
+
+      if (art) {
+        document.title = art.titulo + " — Marcelo A. R. de Lemos";
+        document.getElementById("art-title").textContent = art.titulo;
+        document.getElementById("art-authors").textContent = art.autores;
+        if (art.lead) {
+          var lead = document.getElementById("art-lead");
+          lead.textContent = art.lead;
+          lead.hidden = false;
+        }
+        if (art.fonte) {
+          var src = document.getElementById("art-source");
+          src.href = art.fonte;
+          src.hidden = false;
+        }
+      }
+
+      var ano = document.getElementById("ano");
+      if (ano) ano.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>

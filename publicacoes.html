@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicações — Marcelo A. R. de Lemos</title>
+  <meta name="description" content="Artigos de Marcelo Augusto Rodrigues de Lemos sobre direito penal, dolo, garantias e os limites do poder punitivo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { background: var(--bg); }
+    .article-topbar { background: var(--black); }
+    .article-topbar .header-inner { padding-block: 18px; }
+    .article-back { font-family: var(--ui); font-size: 13px; letter-spacing: 1px; color: var(--on-dark); }
+    .article-back:hover { color: var(--gold); }
+    .pub-page { background: var(--bg); color: var(--on-dark); padding: 140px 0 120px; }
+    .pub-page .wrap { max-width: 880px; }
+    .pub-page .kicker { color: var(--gold-soft); }
+    .pub-page h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; letter-spacing: -0.6px; margin: 0 0 22px; }
+    .pub-page .lead { max-width: 62ch; color: var(--on-dark-2); font-size: 1.14rem; margin: 0 0 8px; }
+  </style>
+</head>
+<body>
+  <header class="site-header article-topbar" data-scrolled>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/logo.png" alt="Marcelo A. R. de Lemos — Advocacia Criminal e Penal Empresarial" />
+      </a>
+      <a class="article-back" href="index.html">← Início</a>
+    </div>
+  </header>
+
+  <main class="pub-page">
+    <div class="wrap">
+      <p class="kicker">Publicações</p>
+      <h1>Artigos</h1>
+      <p class="lead">
+        A escrita integra a forma como Marcelo Lemos compreende e exerce a advocacia.
+        Em seus artigos, o direito penal é examinado para além de respostas imediatas,
+        a partir de questões relacionadas à responsabilidade, ao dolo, à interpretação,
+        às garantias fundamentais e aos limites do exercício do poder punitivo.
+      </p>
+      <ul class="pub-list">
+        <li>
+          <a href="leitura.html?a=fundo-do-mar">
+            <span class="pub-title">1.000 advogados no fundo do mar? Um bom começo!</span>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="artigo.html">
+            <span class="pub-title">Constrangimento epistemológico e a tipicidade da lavagem de dinheiro</span>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="leitura.html?a=funcionalismo">
+            <span class="pub-title">Funcionalismo penal e positivismo jurídico</span>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="leitura.html?a=verdade-caso-concreto">
+            <span class="pub-title">Nem sempre algo correto (lei ou tese) é verdadeiro (no caso concreto)!</span>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="leitura.html?a=penas-8-1">
+            <span class="pub-title">Desmistificando as penas do 8/1: o caso Débora</span>
+            <span class="pub-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="images/logo.png" alt="Marcelo A. R. de Lemos — Advocacia Criminal e Penal Empresarial" />
+        <p class="footer-role">OAB/RS 94.933 · OAB/RO 13.901 · Advocacia Criminal e Penal Empresarial</p>
+      </div>
+      <p class="footer-legal">© <span id="ano"></span> Marcelo A. R. de Lemos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () { var el = document.getElementById("ano"); if (el) el.textContent = String(new Date().getFullYear()); })();
+  </script>
+</body>
+</html>
