@@ -112,3 +112,17 @@
     form.reset();
   });
 })();
+
+// Cards de atuação: abrir/fechar o texto ao clicar
+(function () {
+  var toggles = document.querySelectorAll(".card-toggle");
+  if (!toggles.length) return;
+  toggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var card = btn.closest(".card--territorio");
+      if (!card) return;
+      var open = card.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+})();
