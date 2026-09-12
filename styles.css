@@ -169,8 +169,13 @@ a { color: inherit; text-decoration: none; }
 .section-black { background: var(--black); color: var(--on-dark); }
 .section-light { background: var(--cream); color: var(--ink); }
 .section-dark .kicker, .section-black .kicker { color: var(--gold-soft); }
-.section-head { max-width: 640px; margin-bottom: 60px; }
-.section-head h2 { font-size: clamp(2.1rem, 4.6vw, 3.2rem); }
+.section-head { max-width: 680px; margin-bottom: 60px; }
+/* Títulos de seção (tópicos) em caixa alta */
+.section h2,
+.about-copy h2, .expertise-copy h2, .parcerias-inner h2, .contato-lead h2 {
+  text-transform: uppercase; letter-spacing: 1.5px;
+}
+.section-head h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
 .section-intro { margin: 20px 0 0; color: var(--ink-soft); font-size: 1.14rem; }
 .section-dark .section-intro, .section-black .section-intro { color: #b7b1a5; }
 
