@@ -1,32 +1,40 @@
-# Marcelo Augusto Rodrigues de Lemos — Landing Page
+# Marcelo A. R. de Lemos — Landing Page
 
-Página institucional do advogado criminalista Marcelo Augusto Rodrigues de
-Lemos, com destaque para o artigo **“Constrangimento epistemológico e a
-tipicidade da lavagem de dinheiro”** (publicado originalmente na coluna *Diário
-de Classe*, ConJur, em 22 de julho de 2023).
+Landing page de conversão do advogado criminalista **Marcelo Augusto Rodrigues
+de Lemos**, especialista em Direito Penal Econômico. Objetivo: atrair clientes e
+parceiros, apresentando de forma direta o que ele faz, como faz e seus
+diferenciais.
 
-## Estrutura
+## Estrutura (blocos)
 
-| Arquivo       | Descrição                                              |
-| ------------- | ------------------------------------------------------ |
-| `index.html`  | Página única (hero, sobre, artigo com notas, atuação, contato). |
-| `styles.css`  | Estilos — tipografia serifada, layout responsivo, tema claro. |
-| `main.js`     | Ano do rodapé e validação do formulário de contato.    |
+Topo (hero + frase de impacto) → Atuação (o que faz) → Método (como faz) →
+Diferenciais → Expertise → Publicação em destaque → Parcerias → Contato.
 
-## Como visualizar
+| Arquivo        | Descrição                                                    |
+| -------------- | ------------------------------------------------------------ |
+| `index.html`   | Landing principal, organizada em blocos.                     |
+| `artigo.html`  | Página do artigo completo (ConJur), com notas.               |
+| `styles.css`   | Tema escuro editorial (preto, creme, dourado) + responsivo.  |
+| `main.js`      | Header no scroll, menu mobile, animações e formulário (demo).|
+| `images/`      | Fotos do site — veja `images/README.md`.                     |
 
-Site estático, sem dependências de build. Basta abrir o `index.html` no
-navegador ou servir a pasta:
+## Imagens
+
+O site funciona **sem imagens** (usa uma arte em linha elegante como fallback).
+Para ativar as fotos reais, adicione os arquivos em `images/` com os nomes
+indicados em [`images/README.md`](images/README.md).
+
+## Visualizar localmente
 
 ```bash
 python3 -m http.server 8000
-# depois acesse http://localhost:8000
+# acesse http://localhost:8000
 ```
 
 ## Observações
 
-- O formulário de contato é apenas demonstrativo no front-end. Para receber
-  mensagens, conecte um serviço de envio (por exemplo, um endpoint de formulário
-  ou função serverless) ao `submit` em `main.js`.
-- Fontes carregadas via Google Fonts (Cormorant Garamond, Source Serif 4,
-  Source Sans 3).
+- O formulário de contato é demonstrativo. Para receber mensagens, conecte um
+  serviço de envio (e-mail/WhatsApp) ao `submit` em `main.js`.
+- Dados de contato (e-mail, WhatsApp, OAB) estão como placeholder — substituir
+  pelos reais.
+- Fontes via Google Fonts: Cormorant Garamond, EB Garamond, Jost.
