@@ -57,7 +57,7 @@
         <h1 class="hero-title hero-phrase" data-reveal>
           A técnica está em distinguir<br />
           o que parece do que<br />
-          juridicamente se sustenta.
+          juridicamente se <span class="accent">sustenta</span>.
         </h1>
         <div class="hero-signature" data-reveal>
           <p class="hero-name">Marcelo Augusto Rodrigues de Lemos</p>
@@ -333,28 +333,16 @@
 
     <!-- 10 — CONTATO -->
     <section class="section section-black section-contato" id="contato">
-      <div class="wrap contato-inner">
-        <div class="contato-lead" data-reveal>
-          <p class="kicker">Contato</p>
-          <p class="contato-sub">
-            Para informações sobre atendimento e atuação profissional, utilize um dos
-            canais abaixo.
-          </p>
-          <ul class="contato-list">
-            <li><span>E-mail</span><a href="mailto:contato@exemplo.com.br">contato@exemplo.com.br</a></li>
-            <li><span>WhatsApp</span><a href="#">(00) 00000-0000</a></li>
-          </ul>
-        </div>
-        <form class="contato-form" novalidate data-reveal aria-label="Formulário de contato">
-          <div class="form-row">
-            <label><span>Nome</span><input type="text" name="nome" autocomplete="name" required /></label>
-            <label><span>Telefone / WhatsApp</span><input type="tel" name="telefone" autocomplete="tel" /></label>
-          </div>
-          <label><span>E-mail</span><input type="email" name="email" autocomplete="email" required /></label>
-          <label><span>Mensagem</span><textarea name="mensagem" rows="4" required></textarea></label>
-          <button class="btn btn-gold" type="submit">Enviar mensagem</button>
-          <p class="form-note" role="status" aria-live="polite" hidden></p>
-        </form>
+      <div class="wrap contato-final">
+        <p class="kicker" data-reveal>Contato</p>
+        <p class="contato-frase" data-reveal>
+          Para informações sobre atendimento e atuação profissional, utilize um dos
+          canais abaixo.
+        </p>
+        <a class="btn btn-gold btn-whatsapp" href="#" data-reveal>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.82c2.16 0 4.19.84 5.72 2.37a8.06 8.06 0 0 1 2.37 5.72c0 4.46-3.63 8.09-8.1 8.09a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.11.82.83-3.04-.2-.31a8.04 8.04 0 0 1-1.25-4.34c0-4.46 3.63-8.09 8.1-8.09Zm-4.5 4.38c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.2 3.36 5.34 4.58.75.29 1.33.46 1.78.59.75.24 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.02-.29-.1-.5-.16-.71.16-.21.31-.81 1.02-.99 1.23-.18.21-.37.24-.68.08-.31-.16-1.32-.49-2.51-1.55-.93-.83-1.56-1.85-1.74-2.16-.18-.31-.02-.48.14-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54-.18-.01-.39-.01-.6-.01Z"/></svg>
+          Falar no WhatsApp
+        </a>
       </div>
     </section>
   </main>
