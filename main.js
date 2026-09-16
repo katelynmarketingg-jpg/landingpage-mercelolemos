@@ -74,25 +74,6 @@
   items.forEach(function (el) { io.observe(el); });
 })();
 
-// Parallax sutil no hero
-(function () {
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) return;
-  var photo = document.querySelector(".hero-photo");
-  var art = document.querySelector(".hero-art");
-  if (!photo && !art) return;
-  var ticking = false;
-  var apply = function () {
-    var y = window.scrollY || 0;
-    if (y < 900) {
-      if (photo) photo.style.transform = "translateY(" + (y * 0.16) + "px) scale(1.1)";
-    }
-    ticking = false;
-  };
-  window.addEventListener("scroll", function () {
-    if (!ticking) { window.requestAnimationFrame(apply); ticking = true; }
-  }, { passive: true });
-})();
 
 // Formulário (demo — sem back-end)
 (function () {
