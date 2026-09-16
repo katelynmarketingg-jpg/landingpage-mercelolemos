@@ -544,7 +544,7 @@ body.reading-page { background: #eae9e4; }
 .reading-back { font-family: var(--ui); font-size: 13px; letter-spacing: 1px; color: var(--on-dark); }
 .reading-back:hover { color: var(--gold); }
 .reading-hero { background: linear-gradient(180deg, #000000, #232321); color: var(--on-dark); padding: 128px 0 70px; }
-.reading-hero .wrap { max-width: 820px; }
+.reading-hero .wrap { max-width: 720px; }
 .reading-hero .kicker { color: var(--gold-soft); }
 .reading-hero h1 { font-size: clamp(2rem, 4.8vw, 3.3rem); font-weight: 700; letter-spacing: -0.8px; line-height: 1.09; }
 .reading-hero .meta { margin-top: 22px; font-family: var(--ui); font-size: 12.5px; letter-spacing: 1.5px; color: var(--gold-soft); text-transform: uppercase; }
